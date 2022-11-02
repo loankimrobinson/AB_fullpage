@@ -17,9 +17,9 @@ ui <- fullPage(
   # menu tabs----
   menu = c(
     'Home' = 'home',
-    'Game Schedule' = 'game_schedule',
+    'Location' = 'location',
     'Analytics' = 'analytic',
-    'Recommendations' = 'recomendation',
+    'Recommendations' = 'recommendation',
     'Road to the Super Bowl' = 'road',
     'About Us' = 'about'
   ),
@@ -45,6 +45,41 @@ ui <- fullPage(
               hr(),
               h3('#FUTUREWITHMORECHEERS')
       )
+    )
+  ),
+  fullSection(
+    menu = 'location',
+    center = TRUE,
+    fullSlideImage(
+      img = 'nfl.jpeg'
+    )
+  ),
+  fullSection(
+    menu = 'analytic',
+    center = TRUE,
+    fullSlideImage(
+      img = 'Cheers.jpeg'
+    )
+  ),
+  fullSection(
+    menu = 'recommendation',
+    center = TRUE,
+    fullSlideImage(
+      img = 'AB-InBev-logo.jpeg'
+    )
+  ),
+  fullSection(
+    menu = 'road',
+    center = TRUE,
+    fullSlideImage(
+      img = 'q3earnings_news_banner.png'
+    )
+  ),
+  fullSection(
+    menu = 'about',
+    center = TRUE,
+    fullSlideImage(
+      img = 'webhero-home.jpeg'
     )
   )
 )
