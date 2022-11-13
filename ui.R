@@ -48,22 +48,29 @@ ui <- fullPage(
     )
   ),
   fullSection(
-    menu = 'schedule',
+    menu = 'analytic',
     center = TRUE,
+    id = "schedule",
     fullSlideImage(
-      img = 'nfl.jpeg'
+      img = 'nfl.jpeg',
+      uiOutput("nfl_schedule")
+     
     )
   ),
   fullSection(
     menu = 'analytic',
     center = TRUE,
+   
     fullSlideImage(
-      img = 'Cheers.jpeg'
+      img = 'Cheers.jpeg',
+      uiOutput("analytics_out")
+
     )
   ),
   fullSection(
     menu = 'recommendation',
     center = TRUE,
+
     fullSlideImage(
       img = 'AB-InBev-logo.jpeg'
     )
