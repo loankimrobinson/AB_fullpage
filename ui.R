@@ -51,7 +51,7 @@ ui <- fullPage(
     menu = 'analytic',
     center = TRUE,
     id = "schedule",
-    fullSlideImage(
+    fullSectionImage(
       img = 'nfl.jpeg',
       uiOutput("nfl_schedule")
      
