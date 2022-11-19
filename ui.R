@@ -17,69 +17,66 @@ ui <- fullPage(
   # menu tabs----
   menu = c(
     'Home' = 'home',
-    'Game Schedule' = 'schedule',
+    'Schedule' = 'schedule',
     'Analytics' = 'analytic',
+    'Customer Segment' = 'customer',
     'Recommendations' = 'recommendation',
-    'Road to the Super Bowl' = 'road',
     'About Us' = 'about'
   ),
   # home section----
   fullSection(
     menu = 'home',
     center = TRUE,
-      fullSlideImage(
-          img = 'webhero-home.jpeg',
-          div(
-              style = 'padding:10vh 25% 0 25%;color:#e3af32;text-align:center;',
-              tags$button(
-              id = "btnhome",
-              class = 'btn action-button',
-              style = 'background-color:rgba(0,0,0,0);',
-              img(
-                  src = paste0('logo_1.svg'),
-                  width = '60%',
-                  style = ''
-              ),
-              onclick ="window.open('https://www.ab-inbev.com/','_blank','resizable,height=260,width=370')"
-            ),
-              hr(),
-              h3('#FUTUREWITHMORECHEERS')
+    fullSlideImage(
+      img = 'webhero-home.jpeg',
+      div(
+        style = 'padding:10vh 25% 0 25%;color:#e3af32;text-align:center;',
+        tags$button(
+          id = "btnhome",
+          class = 'btn action-button',
+          style = 'background-color:rgba(0,0,0,0);',
+          img(
+            src = paste0('logo_1.svg'),
+            width = '60%',
+            style = ''
+          ),
+          onclick ="window.open('https://www.ab-inbev.com/','_blank','resizable,height=260,width=370')"
+        ),
+        hr(),
+        h3('#FUTUREWITHMORECHEERS')
       )
     )
   ),
   fullSection(
-    menu = 'analytic',
+    menu = 'schedule',
     center = TRUE,
-    id = "schedule",
-    fullSectionImage(
-      img = 'nfl.jpeg',
-      uiOutput("nfl_schedule")
-     
-    )
+    fullSlideImage(
+      img = 'webhero-home.jpeg',
+    uiOutput("nfl_schedule"))
   ),
   fullSection(
     menu = 'analytic',
     center = TRUE,
-   
+    id = "analytic",
     fullSlideImage(
       img = 'Cheers.jpeg',
-      uiOutput("analytics_out")
-
+      uiOutput("analytics_out"),
+      uiOutput("tab1")
+    )
+  ),
+  fullSection(
+    menu = 'customer',
+    center = TRUE,
+    id = "customer",
+    fullColumn(width = 12,
+      uiOutput("tab2")
     )
   ),
   fullSection(
     menu = 'recommendation',
     center = TRUE,
-
     fullSlideImage(
       img = 'AB-InBev-logo.jpeg'
-    )
-  ),
-  fullSection(
-    menu = 'road',
-    center = TRUE,
-    fullSlideImage(
-      img = 'q3earnings_news_banner.png'
     )
   ),
   fullSection(
